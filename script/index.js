@@ -63,7 +63,23 @@ const loadVideoDetails = (videoId) => {
 const displayVideoDetails = (video) =>{
   console.log(video);
   document.getElementById("videoDetails").showModal();
+  const detailsContainer = document.getElementById("details-container");
+  detailsContainer.innerHTML = 
   
+  `
+  <div class="card bg-base-100 image-full shadow-sm">
+  <figure>
+    <img
+      src="${video.thumbnail}"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">${video.title}</h2>
+    <p>${video.description}</p>
+  </div>
+</div>
+
+  `
 }
 
 
